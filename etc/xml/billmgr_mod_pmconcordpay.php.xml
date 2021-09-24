@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mgrdata>
+  <plugin name="pmconcordpay.php">
+    <group>payment_method</group>
+    <msg name="desc_short" lang="ru">ConcordPay</msg>
+    <msg name="desc_short" lang="ua">ConcordPay</msg>
+    <msg name="desc_short" lang="en">ConcordPay</msg>
+    <msg name="desc_full" lang="ru">ConcordPay интеграция</msg>
+    <msg name="desc_full" lang="ua">ConcordPay інтеграція</msg>
+    <msg name="desc_full" lang="en">ConcordPay integration</msg>
+    <msg name="price" lang="ru">Бесплатно</msg>
+    <msg name="price" lang="ua">Безкоштовно</msg>
+    <msg name="price" lang="en">Free</msg>
+  </plugin>
+
+  <lang name="en">
+    <messages name="label_paymethod">
+      <msg name="pmconcordpay.php">ConcordPay</msg>
+      <msg name="module_pmconcordpay.php">ConcordPay</msg>
+    </messages>
+    <messages name="paymethod.edit.concordpay.php">
+      <msg name="merchant_id">Merchant ID</msg>
+      <msg name="secret_key">Secret key</msg>
+    </messages>
+  </lang>
+
+  <lang name="ru">
+    <messages name="label_paymethod">
+      <msg name="pmconcordpay.php">ConcordPay</msg>
+      <msg name="module_pmconcordpay.php">ConcordPay</msg>
+    </messages>
+    <messages name="paymethod.edit.concordpay.php">
+      <msg name="merchant_id">Идентификатор продавца</msg>
+      <msg name="secret_key">Секретный ключ</msg>
+    </messages>
+  </lang>
+
+  <lang name="ua">
+    <messages name="label_paymethod">
+      <msg name="pmconcordpay.php">ConcordPay</msg>
+      <msg name="module_pmconcordpay.php">ConcordPay</msg>
+    </messages>
+    <messages name="paymethod.edit.concordpay.php">
+      <msg name="merchant_id">Ідентифікатор продавця</msg>
+      <msg name="secret_key">Секретний ключ</msg>
+    </messages>
+  </lang>
+
+  <metadata name="paymethod.edit.concordpay.php" type="form">
+    <form>
+      <page name="methodprops">
+        <field name="merchant_id">
+          <input name="merchant_id" private="yes" required="yes" type="text"/>
+        </field>
+        <field name="secret_key">
+          <input name="secret_key" private="yes" required="yes" type="text"/>
+        </field>
+      </page>
+    </form>
+  </metadata>
+
+  <metadata name="payment.concordpay.fail" type="form">
+    <form>
+      <field name="fail_description" noname="yes" formwidth="yes">
+        <textdata name="fail_description"/>
+      </field>
+    </form>
+  </metadata>
+
+  <metadata name="payment.concordpay.success" type="form">
+    <form>
+      <field name="success_description" noname="yes" formwidth="yes">
+        <textdata name="success_description"/>
+      </field>
+    </form>
+  </metadata>
+
+  <lang name="en">
+    <messages name="payment.concordpay.fail">
+      <msg name="fail_description">Fail</msg>
+    </messages>
+    <messages name="payment.concordpay.success">
+      <msg name="success_description">Success</msg>
+    </messages>
+  </lang>
+  <lang name="ru">
+    <messages name="payment.concordpay.fail">
+      <msg name="fail_description">Ошибка</msg>
+    </messages>
+    <messages name="payment.concordpay.success">
+      <msg name="success_description">Успех</msg>
+    </messages>
+  </lang>
+  <lang name="ua">
+    <messages name="payment.concordpay.fail">
+      <msg name="fail_description">Помилка</msg>
+    </messages>
+    <messages name="payment.concordpay.success">
+      <msg name="success_description">Успіх</msg>
+    </messages>
+  </lang>
+</mgrdata>
+
