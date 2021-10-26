@@ -1,6 +1,8 @@
 #!/usr/bin/php
 <?php
 
+// Generate payment form.
+
 set_include_path(get_include_path() . PATH_SEPARATOR . "/usr/local/mgr5/include/php");
 define('__MODULE__', "concordpaypayment");
 

@@ -23,7 +23,7 @@
   
 Модуль готов к работе.
 
-*Модуль протестирован для работы с ISPManager 5.286, PHP 7.2.*
+*Модуль протестирован для работы с ISPManager 5.286, BILLmanager 5.100.5, PHP 7.4.*
 
 # ConcordPay Payment Module for BILLmanager
 
@@ -50,4 +50,4 @@ This module for BILLmanager will allow you to accept payments through the Concor
 
 The module is ready to work.
 
-*The module is tested to work with ISPManager 5.286, PHP 7.2.*
+*The module is tested to work with ISPManager 5.286, BILLmanager 5.100.5, PHP 7.4.*

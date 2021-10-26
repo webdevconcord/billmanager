@@ -75,19 +75,14 @@ try {
 
         echo $paymethod_form->asXML();
     } elseif ($command == "crdelete") {
+        // Deleting a payment record from the BillManager database.
+        // The record will remain in the ConcordPay database!
         $payment_id = $options['payment'];
+
         $info = LocalQuery("payment.info", array("elid" => $payment_id,));
+        Debug(print_r($info));
+        LocalQuery("payment.delete", array("elid" => $payment_id,));
 
-        $out = HttpQuery($gateway_url . $info->payment[0]->paymethod[1]->secret_key . "/bills/" . $payment_id,
-            array("status" => "rejected"),
-            "PATCH",
-            $info->payment[0]->paymethod[1]->merchant_id,
-            $info->payment[0]->paymethod[1]->secret_key);
-
-        $out_xml = simplexml_load_string($out);
-        if ($out_xml->result_code == "0" || $out_xml->result_code == "210") {
-            LocalQuery("payment.delete", array("elid" => $payment_id,));
-        }
     } elseif ($command == "crvalidate") {
         $payment_form = simplexml_load_string(file_get_contents('php://stdin'));
 

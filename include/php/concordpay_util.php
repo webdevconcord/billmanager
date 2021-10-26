@@ -188,10 +188,14 @@ function getResponseSignature($order)
  * @return array
  */
 function CgiInput($skip_auth = false) {
-	Debug(implode("\n",
+	Debug(
+		implode(
+			"\n",
 			array_map( function ($v, $k) { return sprintf("%s='%s'", $k, $v); },
 			$_SERVER, 
-			array_keys($_SERVER))));
+			array_keys($_SERVER))
+		)
+	);
 
 	$input = $_SERVER["QUERY_STRING"];
 	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -286,7 +290,8 @@ function NeedSaveCardOnPayment($info) {
 }
 
 //
-//$info - информация о платеже. Помимо этого может содержать сведения для совершения повторных безакцептных платежей, если клиент пожелал сохранить способ оплаты
+//$info - информация о платеже. Помимо этого может содержать сведения для совершения повторных
+// безакцептных платежей, если клиент пожелал сохранить способ оплаты
 //$info = array (
 // "elid" => 123,  - платеж в биллинге
 // "externalid" => "12341423" - платеж на стороне платежки
@@ -340,7 +345,8 @@ function AddRedirectToPage($page) {
 
 
 /**
- * @param $fullname
+ * @param $fullName
+ * @param $nameType
  * @return false|string[]
  */
 function getName($fullName, $nameType)
